@@ -1,0 +1,39 @@
+.card {
+  display: flex;
+  flex-direction: row;
+  border-radius: 0.8rem;
+  margin: 2rem;
+  box-shadow: 6px 6px 20px rgba(122, 122, 122, 0.212);
+  justify-content: space-between;
+  height: 8rem;
+  width: 90%;
+}
+
+.card-info {
+  font-family: 'Avenir Next', 'Lato', sans-serif;
+  font-weight: 500;
+  font-size: 1.1rem;
+  margin: 0.7rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.bottom-info {
+  display: flex;
+  flex-direction: row;
+  font-weight: 400;
+  color: rgb(119, 119, 119);
+  font-size: 0.9rem;
+}
+
+.similarity {
+  color: rgb(19, 165, 0);
+  font-weight: 600;
+}
+
+img {
+  width: 5.5rem;
+  border-radius: 0.8rem 0 0 0.8rem;
+  object-fit: cover;
+}
