@@ -1,9 +1,9 @@
-import Layout from './components/Layout/layout';
+import SearchArticles from './components/SearchArticles/searchArticles';
 
 function App() {
   return (
     <div className="App">
-      <Layout />
+      <SearchArticles />
     </div>
   );
 }

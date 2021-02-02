@@ -2,6 +2,7 @@ import './newsCard.css';
 import moment from 'moment';
 
 const NewsCard = ({ data }) => {
+  //Helper functions
   const percentage = (data.similarity * 100).toFixed();
   const date = moment(data.published).format('MMM.D.YYYY');
 

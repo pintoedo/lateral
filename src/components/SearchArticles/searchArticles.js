@@ -1,11 +1,10 @@
-import React, { useEffect, useState } from 'react';
-import './layout.css';
+import React, { useState } from 'react';
+import './searchArticles.css';
 import NewsCard from '../NewsCard/newsCard';
-import getArticles from '../../services/apiService';
 
 const request = require('request');
 
-const Layout = () => {
+const SearchArticles = () => {
   const [query, setQuery] = useState('');
   const [articles, setArticles] = useState([]);
 
@@ -21,16 +20,13 @@ const Layout = () => {
     console.log(e.target.value);
   }
 
-  const url =
-    'https://www.vice.com/en/article/y3ge9k/cops-pepper-sprayed-a-9-year-old-girl-and-told-her-she-was-acting-like-a-child';
-
   const getRecommendations = (str) => {
-    var options = {
+    const options = {
       method: 'POST',
       url: 'https://news-api.lateral.io/documents/similar-to-text',
       headers: {
         'content-type': 'application/json',
-        'subscription-key': 'f53dd4aea5bfc8ecd850fcbe1b08921e',
+        'subscription-key': process.env.REACT_APP_API_KEY,
       },
       body: {
         text: str,
@@ -44,7 +40,8 @@ const Layout = () => {
   };
 
   const getArticles = async (str) => {
-    var options = {
+    console.log(process);
+    const options = {
       method: 'GET',
       url: 'https://document-parser-api.lateral.io/',
       qs: {
@@ -52,7 +49,7 @@ const Layout = () => {
       },
       headers: {
         'content-type': 'application/json',
-        'subscription-key': 'f53dd4aea5bfc8ecd850fcbe1b08921e',
+        'subscription-key': process.env.REACT_APP_API_KEY,
       },
     };
     await request(options, function (error, response, body) {
@@ -65,27 +62,26 @@ const Layout = () => {
 
   return (
     <div className="layout-container">
-      <h1>Later</h1>
-      <form onSubmit={handleSubmit}>
-        <label>
-          INSERT URL:
-          <input type="text" value={query} onChange={handleChange} />
-        </label>
-        <input type="submit" value="Submit" />
-      </form>
-      {articles ? (
-        <div className="cards">
+      <div className="search-container">
+        <form onSubmit={handleSubmit}>
+          <label>
+            Similar Articles
+            <input type="text" value={query} onChange={handleChange} />
+          </label>
+          <button type="submit" value="Submit">
+            Search
+          </button>
+        </form>
+      </div>
+      {
+        <div className="cards-container">
           {articles.map((data, index) => (
             <NewsCard data={data} />
           ))}
         </div>
-      ) : (
-        <div>
-          <h1>LOADING...</h1>
-        </div>
-      )}
+      }
     </div>
   );
 };
 
-export default Layout;
+export default SearchArticles;
