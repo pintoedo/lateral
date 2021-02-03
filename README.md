@@ -1,70 +1,55 @@
-# Getting Started with Create React App
+# ![Screenshot 2021-02-03 at 21.30.22](/Users/eduardopinto/Desktop/Screenshot 2021-02-03 at 21.30.22.png)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
 
-In the project directory, you can run:
+# Table of Content
 
-### `npm start`
+- [Table of Content](#table-of-content)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+  - 1. About the app
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+  - 2. Libraries & Frameworks
 
-### `npm test`
+  - 3. Installation & Set Up
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+    
 
-### `npm run build`
+## 1. About the app
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Artiqle is simple web application optimized for mobile, where the use can paste any articles from the internet and will get a number of articles containing similar content to the original one. The app combines two api's for extracting data and generate recommendations based on that data.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+## 2. Libraries & Frameworks
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+| Name                  |                                                    |
+| --------------------- | -------------------------------------------------- |
+| React                 | A JavaScript library for building user interfaces. |
+| React-testing-library | Built-in library for testing                       |
+| Lateral API's         | Similar-to-text / Article extractor                |
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 3. Installation & Set Up
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+1. Install project dependencies
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+```bash
+ 	npm install
+```
 
-## Learn More
+2. Add environment variables on your `.env.local`
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```env
+REACT_APP_API_KEY=
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+3. Start the development server
 
-### Code Splitting
+```bash
+	npm start
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+4. Build for production
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```bash
+ npm run build
+```
