@@ -53,3 +53,6 @@ Artiqle is simple web application optimized for mobile, where the use can paste 
 ```bash
  npm run build
 ```
+## 4. License
+
+MIT © [Eduardo Pinto](https://github.com/pintoedo)
