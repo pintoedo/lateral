@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './searchArticles.css';
 import NewsCard from '../NewsCard/newsCard';
+import Filter from '../Filter/filter';
 
 const request = require('request');
 
@@ -33,8 +34,9 @@ const SearchArticles = () => {
       },
       json: true,
     };
-    request(options, function (error, response, body) {
+    request(options, function (error, res, body) {
       if (error) throw new Error(error);
+      console.log(body);
       setArticles(body);
     });
   };
@@ -52,7 +54,7 @@ const SearchArticles = () => {
         'subscription-key': process.env.REACT_APP_API_KEY,
       },
     };
-    await request(options, function (error, response, body) {
+    await request(options, function (error, res, body) {
       if (error) throw new Error(error);
       let parsed = JSON.parse(body);
       let stringed = JSON.stringify(parsed.body);
@@ -64,19 +66,23 @@ const SearchArticles = () => {
     <div className="layout-container">
       <div className="search-container">
         <form onSubmit={handleSubmit}>
-          <label>
-            Similar Articles
-            <input type="text" value={query} onChange={handleChange} />
-          </label>
-          <button type="submit" value="Submit">
-            Search
+          <input
+            type="text"
+            value={query}
+            onChange={handleChange}
+            className="search-input"
+            placeholder="Paste an article's url"
+          />
+          <button className="search-button" type="submit" value="Submit">
+            O
           </button>
         </form>
       </div>
+      <Filter />
       {
         <div className="cards-container">
-          {articles.map((data, index) => (
-            <NewsCard data={data} />
+          {articles.map((data, i) => (
+            <NewsCard data={data} key={i} />
           ))}
         </div>
       }

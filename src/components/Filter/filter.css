@@ -1,0 +1,7 @@
+.filter-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-family: 'Avenir Next', 'Lato', sans-serif;
+  color: #0083ee;
+}

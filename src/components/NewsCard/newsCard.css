@@ -1,22 +1,25 @@
 .card {
   display: flex;
-  flex-direction: row;
-  border-radius: 0.8rem;
-  margin: 2rem;
+  border-radius: 15px;
+  margin: 30px;
   box-shadow: 6px 6px 20px rgba(122, 122, 122, 0.212);
-  justify-content: space-between;
-  height: 8rem;
+  justify-content: flex-start;
+  height: 125px;
   width: 90%;
 }
 
 .card-info {
-  font-family: 'Avenir Next', 'Lato', sans-serif;
-  font-weight: 500;
-  font-size: 1.1rem;
-  margin: 0.7rem;
+  margin: 0 8px 0 8px;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-between;
+}
+
+.card-title {
+  font-family: 'Avenir Next', 'Lato', sans-serif;
+  padding: 10px;
+  font-size: 18px;
+  font-weight: 500;
 }
 
 .bottom-info {
@@ -24,7 +27,8 @@
   flex-direction: row;
   font-weight: 400;
   color: rgb(119, 119, 119);
-  font-size: 0.9rem;
+  font-size: 14px;
+  margin: 0 0 10px 10px;
 }
 
 .similarity {
@@ -33,7 +37,7 @@
 }
 
 img {
-  width: 5.5rem;
-  border-radius: 0.8rem 0 0 0.8rem;
+  width: 90px;
+  border-radius: 15px 0 0 15px;
   object-fit: cover;
 }
