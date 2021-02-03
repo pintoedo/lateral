@@ -1,5 +1,8 @@
 # ![Project preview](preview.png)
 
+<p align="center">
+  <img src="preview.png" />
+</p>
 
 
 # Table of Content
@@ -30,29 +33,40 @@ Artiqle is simple web application optimized for mobile, where the use can paste 
 
 ## 3. Installation & Set Up
 
-1. Install project dependencies
+1. Clone the repo
+
+```
+git clone https://github.com/pintoedo/lateral.git
+```
+
+2. Install project dependencies
 
 ```bash
  npm install
 ```
 
-2. Add environment variables on your `.env.local`
+3. Add environment variables on your `.env.local`
 
 ```env
  REACT_APP_API_KEY=
 ```
 
-3. Start the development server
+4. Start the development server
 
 ```bash
  npm start
 ```
 
-4. Build for production
+5. Build for production
 
 ```bash
  npm run build
 ```
-## 4. License
+## Author
 
-MIT © [Eduardo Pinto](https://github.com/pintoedo)
+Eduardo pinto - [Github](https://github.com/pintoedo) - [LinkedIn](https://www.linkedin.com/in/pintocodes/)
+
+
+## License
+
+This project is licensed under the MIT License.
