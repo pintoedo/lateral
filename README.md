@@ -1,4 +1,4 @@
-# ![Screenshot 2021-02-03 at 21.30.22](/Users/eduardopinto/Desktop/Screenshot 2021-02-03 at 21.30.22.png)
+# ![Project preview](preview.png)
 
 
 
@@ -33,19 +33,19 @@ Artiqle is simple web application optimized for mobile, where the use can paste 
 1. Install project dependencies
 
 ```bash
- 	npm install
+ npm install
 ```
 
 2. Add environment variables on your `.env.local`
 
 ```env
-REACT_APP_API_KEY=
+ REACT_APP_API_KEY=
 ```
 
 3. Start the development server
 
 ```bash
-	npm start
+ npm start
 ```
 
 4. Build for production
