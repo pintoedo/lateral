@@ -1,4 +1,4 @@
-# ![Project preview](preview.png)
+
 
 <p align="center">
   <img src="preview.png" />
