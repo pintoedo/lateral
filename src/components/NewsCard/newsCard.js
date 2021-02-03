@@ -1,14 +1,16 @@
 import './newsCard.css';
 import moment from 'moment';
 
+//Returns each article recommendation in respective format.
+
 const NewsCard = ({ data }) => {
-  //Helper functions
+  //Helpers to transform data into right format
   const percentage = (data.similarity * 100).toFixed();
   const date = moment(data.published).format('MMM.D.YYYY');
   const MAX_LENGTH = 100;
 
   return (
-    <div className="card">
+    <div className="card" title="card-test">
       <img className="card-image" src={data.image} alt="" />
       <div className="card-info">
         <div className="card-title">
