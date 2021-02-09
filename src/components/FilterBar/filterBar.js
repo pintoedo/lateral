@@ -7,8 +7,6 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-//Hard-coded filter bar
-
 const Filter = () => {
   return (
     <div className="filter-container">
@@ -25,7 +23,7 @@ const Filter = () => {
       <div>
         <FontAwesomeIcon icon={faClock} />
         <select className="filter-source">
-          <option value="Past month">PAST MONTH</option>
+          <option value="Past month">BY DATE</option>
           <option value="This week">THIS WEEK</option>
         </select>
       </div>

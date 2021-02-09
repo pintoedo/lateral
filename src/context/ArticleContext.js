@@ -10,7 +10,11 @@ export const ArticleProvider = (props) => {
   const [articles, setArticles] = useState([]);
   const [errors, setErrors] = useState({});
 
-  function handleSubmit(e) {
+  const articlesRecent = articles.sort(
+    (a, b) => Date.parse(b.published) - Date.parse(a.published),
+  );
+
+  const handleSubmit = (e) => {
     e.preventDefault();
     // Url input validation, it will reject query that doesn't containt typical characters in a url.
     const querySchema = Yup.object().shape({
@@ -44,12 +48,12 @@ export const ArticleProvider = (props) => {
       }
       setErrors(formErrors);
     }
-  }
+  };
 
-  function handleChange(e) {
+  const handleChange = (e) => {
     e.preventDefault();
     setQuery(e.target.value);
-  }
+  };
 
   // Receives the output from GetArticles (body text of an article) and returns recommendations based on similar-to-text API.
   const getRecommendations = (str) => {
@@ -100,6 +104,7 @@ export const ArticleProvider = (props) => {
         errors,
         handleChange,
         handleSubmit,
+        articlesRecent,
       }}
     >
       {props.children}

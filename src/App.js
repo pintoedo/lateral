@@ -1,5 +1,4 @@
-import SearchArticles from './components/SearchArticles/searchArticles';
-import { ArticleProvider } from './ArticleContext';
+import { ArticleProvider } from './context/ArticleContext';
 import { Dashboard } from './components/Dashboard/Dashboard';
 
 function App() {

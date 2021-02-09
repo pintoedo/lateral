@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import './searchArticles.css';
 
-import { ArticleContext } from '../../ArticleContext';
+import { ArticleContext } from '../../context/ArticleContext';
 
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
