@@ -1,5 +1,5 @@
 import React from 'react';
-import './filterBar.css';
+import styled from 'styled-components';
 import {
   faNewspaper,
   faQuestionCircle,
@@ -7,33 +7,52 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-//Hard-coded filter bar
-
-const Filter = () => {
+const FilterBar = () => {
   return (
-    <div className="filter-container">
-      <div className="source-filter">
-        <span className="filter-header">Filters:</span>
+    <FilterDiv>
+      <div>
+        <FilterTitle className="filter-header">Filters:</FilterTitle>
       </div>
       <div>
         <FontAwesomeIcon icon={faNewspaper} />
-        <select className="filter-source">
+        <FilterSelect>
           <option value="My sources">MY SOURCES</option>
           <option value="Suggested">SUGGESTED</option>
-        </select>
+        </FilterSelect>
       </div>
       <div>
         <FontAwesomeIcon icon={faClock} />
-        <select className="filter-source">
-          <option value="Past month">PAST MONTH</option>
+        <FilterSelect>
+          <option value="Past month">BY DATE</option>
           <option value="This week">THIS WEEK</option>
-        </select>
+        </FilterSelect>
       </div>
-      <div className="source-filter">
+      <div>
         <FontAwesomeIcon icon={faQuestionCircle} />
       </div>
-    </div>
+    </FilterDiv>
   );
 };
 
-export default Filter;
+//STYLING
+
+const FilterDiv = styled.div`
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  align-items: center;
+  font-family: 'Avenir Next', 'Lato', sans-serif;
+  color: #0083ee;
+`;
+
+const FilterSelect = styled.select`
+  border-style: none;
+  color: #0083ee;
+`;
+
+const FilterTitle = styled.span`
+  color: rgb(126, 126, 126);
+  font-weight: 600;
+`;
+
+export default FilterBar;

@@ -1,10 +1,13 @@
-import SearchArticles from './components/SearchArticles/searchArticles';
+import { ArticleProvider } from './context/ArticleContext';
+import { Dashboard } from './components/Dashboard/Dashboard';
 
 function App() {
   return (
-    <div className="App">
-      <SearchArticles />
-    </div>
+    <ArticleProvider>
+      <div className="App">
+        <Dashboard />
+      </div>
+    </ArticleProvider>
   );
 }
 
