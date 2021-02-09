@@ -1,9 +1,10 @@
 import React, { useContext } from 'react';
+import styled from 'styled-components';
+
 import FilterBar from '../FilterBar/filterBar';
 import NewsCard from '../NewsCard/newsCard';
 import SearchArticles from '../SearchArticles/searchArticles';
 import Header from '../Header/Header';
-import './Dashboard.css';
 
 import { ArticleContext } from '../../context/ArticleContext';
 
@@ -12,7 +13,7 @@ export const Dashboard = () => {
   let { articles } = appContext;
 
   return (
-    <div className="layout-container">
+    <Wrapper className="layout-container">
       <Header />
       <SearchArticles />
       <FilterBar />
@@ -22,6 +23,13 @@ export const Dashboard = () => {
             <NewsCard title="news-card" data={data} key={i} />
           ))}
       </div>
-    </div>
+    </Wrapper>
   );
 };
+
+//Styling
+
+const Wrapper = styled.div`
+  width: 500px;
+  position: absolute;
+`;
